@@ -30,7 +30,7 @@ class Model(models.Model):
 class Product(models.Model):
     model = models.ForeignKey(Model, models.CASCADE, related_name='products')
     name = models.CharField(max_length=250, unique=True)
-    price = models.PositiveBigIntegerField(default=1)
+    price = models.FloatField(default=1)
     description = models.TextField(null=True, blank=True)
 
     def __str__(self):
